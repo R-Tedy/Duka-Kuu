@@ -115,6 +115,7 @@ header{
         & div{
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: 15px;
           & h2>a{
             text-decoration: none;
@@ -142,6 +143,7 @@ header{
       }
     }
   }
+
 .section2{
     width: 100%;
     display: grid;
@@ -253,17 +255,16 @@ header{
 
   .section1{
     width: 100%;
-    display: block;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
     & .image1{
-      position: absolute;
       width: 100%;
     }
   }
   .section2{
     width: 100%;
-    position: relative;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -342,5 +343,34 @@ header{
     }
   }
   
+  .section1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    & .image1{
+      width: 100%;
+    }
+  }
+  .section2{
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    & .image2{
+      height: 30vh;
+      /* display: flex; */
+      border-radius: 15px;
+      /* position: relative; */
+      & img{
+        height: 100%;
+        margin: 5px;
+        border-radius: 20px;
+      }
+      & h2{
+        margin-top: -280px;
+      }
+    }
+  }
 }
+
 
