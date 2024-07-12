@@ -237,7 +237,7 @@ header{
 .display{
   width: 96%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 13rem;
   gap: 5px;
   padding: 10px;
@@ -258,6 +258,94 @@ header{
         color: black;
         &:hover{
           text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.newCarousel{
+  width: 100%;
+  & .newCarouselTitles{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    & .active{
+      & a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    }
+    & .passive{
+      & ul{
+        display: flex;
+        gap: 15px;
+        list-style: none;
+        & li>a{
+          text-decoration: none;
+          color: black;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  & .newCarouselProducts{
+    width: 96%;
+    padding: 15px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 18rem; */
+    gap: 5px;
+    /* border: 1px black solid; */
+
+    & .productData{
+      height: 100%;
+      width: 100%;
+      padding: 10px;
+      position: relative;
+      /* border: 1px black solid; */
+
+      & button{
+        width: 60px;
+        height: 40px;
+        border-radius: 25px;
+        background-color: black;
+        color: white;
+        border: none;
+        position: absolute;
+      }
+      & .productImage{
+        width: 100%;
+        height: 80%;
+        /* border: 1px black solid; */
+        & img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      & .productDetails{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: 20%;
+        text-align: center;
+        /* border: 1px black solid; */
+
+        & h3{
+          font-size: 1rem;
+        }
+        & h4{
+          font-size: 0.8rem;
+          font-weight: 300;
+          color: grey;
         }
       }
     }
@@ -368,7 +456,15 @@ header{
   .display{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 15rem);
+    grid-template-rows: repeat(2, 15rem);
+  }
+
+  .newCarousel{
+    & .newCarouselProducts{
+      grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: 50rem 50rem; */
+
+    }
   }
 }
 
@@ -492,7 +588,15 @@ header{
   .display{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 15rem);
+    grid-template-rows: repeat(2, 15rem);
+  }
+
+  .newCarousel{
+    & .newCarouselProducts{
+      grid-template-columns: 1fr;
+    /* grid-template-rows: 50rem 50rem; */
+
+    }
   }
 }
 
