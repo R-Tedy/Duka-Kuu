@@ -10,7 +10,9 @@
     }
   }
 }
-/* Non responsive nav design */
+
+
+/* desktop layout */
 header{
   margin: auto;
 }
@@ -352,6 +354,36 @@ header{
   }
 }
 
+.roots{
+  width: 90%;
+  padding: 15px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* height: 50vh; */
+  /* border: black solid 1px; */
+  & .rootsDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    & h3>a{
+      text-decoration: none;
+      color: black;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  & .rootImg{
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
 
 /* tablet */
 @media screen and (min-width:780px) and (max-width:1024px) {
@@ -597,6 +629,12 @@ header{
     /* grid-template-rows: 50rem 50rem; */
 
     }
+  }
+
+  .roots{
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(2, 1fr); */
+    /* row-gap: 0px; */
   }
 }
 
