@@ -83,93 +83,186 @@ header{
 
 
 .section1{
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  padding-bottom: 0%;
+    /* border: solid black 1px; */
+  & .image1{
     width: 100%;
+    height: 90vh;
     margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    padding-bottom: 0%;
-      /* border: solid black 1px; */
-    & .image1{
+    /* position: relative; */
+    /* border: solid black 1px; */
+    & img{
       width: 100%;
-      margin: 0;
+      height: 100%;
+      object-fit: cover;
+      z-index: -10;
+    /* border: solid black 1px; */
       /* position: relative; */
-      /* border: solid black 1px; */
-      & img{
-        width: 100%;
-        height: 90vh;
-        object-fit: cover;
-        z-index: -10;
-      /* border: solid black 1px; */
-        /* position: relative; */
-      }
-      & .content{
-        position: absolute;
-        padding: 30px;
-        margin-top: -200px;
-      /* border: solid black 1px; */
-        & h1>a{
-          text-decoration: none;
-          color: black;
-        }
-        & div{
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          gap: 15px;
-          & h2>a{
-            text-decoration: none;
-            color: black;
-            &:hover{
-              text-decoration: underline;
-            }
-          }
-          & button{
-            color: black;
-            height: 35px;
-            width: 150px;
-            font-size: large;
-            font-weight: bold;
-            border-radius: 20px;
-            border: 1px solid black;
-            background-color: transparent;
-            cursor: pointer;
-            &:hover{
-              color: white;
-              background-color: black;
-            }
-          }
-        }
-      }
     }
-  }
-
-.section2{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* border: black 1px solid; */
-    & .image2{
-    /* border: black 1px solid; */
-      width: 100%;
-      & img{
-        width: 100%;
-        height: 80%;
-        object-fit: cover;
+    & .content{
+      position: absolute;
+      padding: 30px;
+      margin-top: -200px;
+    /* border: solid black 1px; */
+      & h1>a{
+        text-decoration: none;
+        color: black;
       }
-      & h2{
-        margin-left: 30px;
-        margin-top: -200px;
-        & a{
+      & div{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        & h2>a{
           text-decoration: none;
           color: black;
           &:hover{
             text-decoration: underline;
           }
         }
+        & button{
+          color: black;
+          height: 35px;
+          width: 150px;
+          font-size: large;
+          font-weight: bold;
+          border-radius: 20px;
+          border: 1px solid black;
+          background-color: transparent;
+          cursor: pointer;
+          &:hover{
+            color: white;
+            background-color: black;
+          }
+        }
       }
     }
   }
+}
+
+.section2{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: 15rem; */
+  /* border: black 1px solid; */
+  padding-bottom: 0%;
+  /* gap: 3px; */
+  & .image2{
+  /* border: black 1px solid; */
+    width: 100%;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    & h2{
+      margin-left: 30px;
+      margin-top: -200px;
+      & a{
+        text-decoration: none;
+        color: black;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.established{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 15px;
+  align-items: center;
+  margin-top: 0;
+  text-align: center;
+  /* border: black 1px solid; */
+  & h2{
+    color: grey;
+    text-transform: uppercase;
+  }
+}
+
+.adventure{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  & .adventureBox{
+    position: absolute;
+    width: 96%;
+    height: 100%;
+    left: 2%;
+    right: 2%;
+    border-radius: 20px;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    & .adventureDetails{
+      margin-top: -100px;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      & p{
+        text-transform: uppercase;
+      }
+      & button{
+        height: 40px;
+        width: 130px;
+        border-radius: 25px;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        &:hover{
+          background-color: #ffffff5d;
+        }
+      }
+    }
+  }
+}
+
+.display{
+  width: 96%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 13rem;
+  gap: 5px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 40px;
+  & .displayContainer{
+    width: 100%;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    & h3{
+      margin-top: -220px;
+      padding: 20px;
+      & a{
+        text-decoration: none;
+        color: black;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
 
 
 /* tablet */
@@ -261,10 +354,21 @@ header{
       width: 100%;
     }
   }
+
   .section2{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .adventure{
+    height: 50vh;
+  }
+
+  .display{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 15rem);
   }
 }
 
@@ -305,6 +409,7 @@ header{
             justify-content: center;
             padding: 30px;
             font-size: 20px;
+            z-index: 50;
             & a{
               text-decoration: none;
               color: black;
@@ -370,6 +475,24 @@ header{
         margin-top: -280px;
       }
     }
+  }
+
+  .adventure{
+    height: 50vh;
+    & .adventureBox{
+      & .adventureDetails{
+        margin-top: -150px;
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+      }
+    }
+  }
+
+  .display{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 15rem);
   }
 }
 
