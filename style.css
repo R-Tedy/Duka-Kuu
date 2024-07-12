@@ -372,6 +372,8 @@ header{
     & h3>a{
       text-decoration: none;
       color: black;
+      display: flex;
+      align-items: center;
       &:hover{
         text-decoration: underline;
       }
@@ -382,6 +384,49 @@ header{
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+.journal{
+  width: 96%;
+  margin: auto;
+  & .journalTitle{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    & .others{
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      & a{
+        color: black;
+      }
+    }
+  }
+  & .journalContent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    & .image{
+      height: 50%;
+      & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    & .journalData{
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      & a{
+        display: flex;
+        align-items: center;
+        color: black;
+        justify-content: center;
+      }
     }
   }
 }
@@ -639,7 +684,22 @@ header{
 
   .roots{
     grid-template-columns: 1fr;
-    grid-template-rows: 40vh 40vh;
+    grid-template-rows: auto;
+  }
+   
+  .journal{
+    & .journalTitle{
+      /* height: 205px; */
+      display: flex;
+      flex-direction: column;
+      & .others{
+        justify-content: flex-start;
+      }
+    }
+    & .journalContent{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 40vh);
+    }
   }
 }
 
