@@ -407,9 +407,13 @@ header{
   & .journalContent{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-flow: row; */
+    /* height: auto; */
+    grid-template-rows: fit-content;
+    /* border: solid black 1px; */
     gap: 10px;
     & .image{
-      height: 50%;
+      height: 20rem;
       & img{
         width: 100%;
         height: 100%;
